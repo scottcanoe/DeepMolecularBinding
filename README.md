@@ -1,6 +1,6 @@
 # Deep Molecular Binding
 
-This notebook describes my (frist) submission to the [Leash Bio kaggle competition](https://www.kaggle.com/competitions/leash-BELKA/overview). In short, the goal is to predict whether small molecules bind with one of three possible proteins. We are given a rather large dataset (~100 million unique molecules) along with information about how each binds to each of the three proteins of interest.
+This notebook describes my (frist) submission to the [Leash Bio kaggle competition](https://www.kaggle.com/competitions/leash-BELKA/overview). In short, the goal is to predict whether small molecules bind with one of three possible proteins. We are given a rather large dataset (~100 million unique molecules) along with information about how each binds to each of the three proteins of interest. I wanted to try a transformer-based approach, and this repo contains my attempt so far.
 <br /><br />
 # Approach
 Molecules (and their building blocks) are given in [SMILES](https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system) format, a linear text-based description of molecular structure, and so this project seemed like a good candidate for a transformer-based appraoch. We are not given the structure of the three protein binding targets. My basic idea was to use a pre-trained embedding followed by a feedforward network that terminates with a 3-unit layer that would given binding probabilities to the three targets.
